@@ -41,8 +41,11 @@ if remaining_slots:
                                      columns=["Slot", "Group Number", "Team Members", "Slide Link"])
             df = pd.concat([df, new_entry], ignore_index=True)
             df.to_csv(DATA_FILE, index=False)
-            st.success(f"✅ Slot {selected_slot} booked by {group_number}!")
-            st.experimental_rerun()
+            st.success(f"✅ Slot {selected_slot} booked by {group_number.strip()}!")
+st.balloons()  # Just for fun 🎈
+st.info("Your booking is confirmed. You may now close this window.")
+st.stop()  # Cleanly stops execution after success
+
         else:
             st.warning("⚠️ Please fill in all fields before submitting.")
 else:
