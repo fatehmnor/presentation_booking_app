@@ -27,8 +27,7 @@ taken_slots = df["Slot"].tolist()
 remaining_slots = [slot for slot in available_slots if slot not in taken_slots]
 
 # Title
-st.title("📅 PSA Presentation Slot Booking System 
-Tuesday 17/6/2025")
+st.title("📅 PSA Presentation Slot Booking-Tuesday 17/6/2025")
 
 if remaining_slots:
     selected_slot = st.selectbox("🕒 Choose a Slot", remaining_slots)
