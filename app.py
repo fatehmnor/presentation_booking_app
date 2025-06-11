@@ -55,3 +55,11 @@ else:
 st.markdown("---")
 st.subheader("📋 Current Bookings")
 st.dataframe(df)
+#admin
+# Admin reset button (for development use only)
+if st.checkbox("🛠️ Admin: Clear all bookings"):
+    if st.button("🚨 Confirm Reset"):
+        df = pd.DataFrame(columns=["Slot", "Group", "Team Members", "Slide Link"])
+        df.to_csv(DATA_FILE, index=False)
+        st.success("✅ All bookings have been cleared.")
+        st.stop()
