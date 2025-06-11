@@ -13,13 +13,13 @@ else:
 
 # Define presentation slots
 available_slots = [
-    "S1 (8:30–8:45)",
-    "S2 (8:50–9:05)",
-    "S3 (9:10–9:25)",
-    "S4 (9:30–9:45)",
-    "S5 (9:50–10:05)",
-    "S6 (10:10–10:25)",
-    "S7 (10:30–10:45)"
+    "Slot1 (8:30–8:45)",
+    "Slot2 (8:50–9:05)",
+    "Slot3 (9:10–9:25)",
+    "Slot4 (9:30–9:45)",
+    "Slot5 (9:50–10:05)",
+    "Slot6 (10:10–10:25)",
+    "Slot7 (10:30–10:45)"
 ]
 
 # Remove taken slots
@@ -27,7 +27,7 @@ taken_slots = df["Slot"].tolist()
 remaining_slots = [slot for slot in available_slots if slot not in taken_slots]
 
 # Title
-st.title("📅 Presentation Slot Booking System")
+st.title("📅 Presentation Slot Booking System Tuesday 17/6/2025")
 
 if remaining_slots:
     selected_slot = st.selectbox("🕒 Choose a Slot", remaining_slots)
